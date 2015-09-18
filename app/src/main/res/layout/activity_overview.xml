@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OverviewActivity"
+    android:id="@+id/MasterLayout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:weightSum="2"
+        android:layout_gravity="right"
+        android:background="#cc8f15">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sort_by"
+                android:id="@+id/textView4"
+                android:layout_marginLeft="5dp"
+                android:textSize="18dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner1"
+                android:spinnerMode="dropdown"
+                android:entries="@array/sorting_array"
+                android:prompt="@string/sorting_prompt"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_plate"
+                android:id="@+id/button"
+                android:layout_gravity="right"
+                android:onClick="inPogress" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fcaf16"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:clickable="false"
+        android:numColumns="1"
+        android:contextClickable="true"
+        android:choiceMode="singleChoice">
+
+    </GridView>
+
+</LinearLayout>
